@@ -99,18 +99,59 @@
 }
 
 .catalogMenu > ul {
-    border: 1px solid #ff5816;
     border-radius: 10px;
     background-color: #ff5816;
     font-size: 11px;
+    box-shadow: 0 2px 0 1px #c64411;
 }
 
 .catalogMenu > ul > li {
-    padding: 10px 8px;
-    flex-basis: auto;
-    flex-grow: 1;
+    padding: 10px 7px;
+}
+
+.catalogMenu > ul > li:hover {
+    background-color: #ff743d;
+    box-shadow: 0 2px 0 1px #ff743d;
 }
 
 .catalogMenu > ul > li > a {
-    /*padding: 10px 8px;*/
+    color: white;
+    text-decoration: none;
+}
+
+.catalogMenu > ul > li:hover > a {
+    text-decoration: underline;
+}
+
+.catalogMenu > ul > li:first-child,
+.catalogMenu > ul > li:last-child{
+    padding: 0;
+}
+
+.catalogMenu > ul > li:first-child:hover,
+.catalogMenu > ul > li:last-child:hover{
+    background-color: rgba(0,0,0,0);
+    box-shadow: none;
+}
+
+.catalogMenu > ul > li:first-child button {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.catalogMenu > ul > li:last-child button {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.catalogMenuButton {
+    height: 100%;
+    width: 15px;
+    background-color: #c64411;
+    border: 0;
+}
+
+.catalogMenuButton:focus {
+    outline: none;
+    background-color: #ff5816;
 }
