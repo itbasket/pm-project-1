@@ -5,119 +5,74 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/fonts.css">
   <link rel="stylesheet" href="styles/index.css">
   <title>Homework №3</title>
 </head>
 <body>
-
-  <div class="mainMenuBackground">
-    <nav class="navigation wrapper">
-      <ul>
-        <li>
-          <a href="#" id="firstDropdown">Каталог</a>
-          <div id="firstDropdownContent">
-            <a href="">Lorem ipsun</a>
-            <a href="">Lorem ipsun</a>
-            <a href="">Lorem ipsun</a>
-          </div>
-        </li>
-        <li>
-          <a href="#" id="secondDropdown">О компании</a>
-          <div id="secondDropdownContent">
-            <a href="">Lorem ipsun</a>
-            <a href="">Lorem ipsun</a>
-            <a href="">Lorem ipsun</a>
-          </div>
-        </li>
-        <li>
-          <a href="#">Оплата и доставка</a>
-        </li>
-        <li>
-          <a href="#">Гарантии и возврат</a>
-        </li>
-        <li>
-          <a href="#">Сотрудничество</a>
-        </li>
-        <li>
-          <a href="#">Услуги</a>
-        </li>
-        <li>
-          <a href="#">Решения</a>
-        </li>
-        <li>
-          <a href="#">Техподдержка</a>
-        </li>
-        <li>
-          <a href="#">Контакты</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
   <div class="wrapper">
     <header>
-      <div class="wrapper catalogMenu">
-        <ul>
-          <li>
-            <button class="catalogMenuButton">
-              <img src="images/icons/catalogLeftButton.png" alt="Меню каталога влево">
-            </button>
-          </li>
-          <li class="catalogMenuItem">
-            <a href="">
-              VOIP ОБОРУДОВАНИЕ
-            </a>
-          </li>
-          <li class="catalogMenuItem">
-            <a href="">
-              SKYPE ОБОРУДОВАНИЕ
-            </a>
-          </li>
-          <li class="catalogMenuItem">
-            <a href="">
-              GSM ОБОРУДОВАНИЕ
-            </a>
-          </li>
-          <li class="catalogMenuItem">
-            <a href="">
-              ВИДЕО-ОБОРУДОВАНИЕ
-            </a>
-          </li>
-          <li class="catalogMenuItem">
-            <a href="">
-              РАДИО И DECT ТЕЛЕФОНЫ
-            </a>
-          </li>
-          <li class="catalogMenuItem">
-            <a href="">
-              ГАРНИТУРЫ
-            </a>
-          </li>
-          <li class="catalogMenuItem">
-            <a href="">
-              ЭЛЕКТРОННЫЕ ЗАМКИ
-            </a>
-          </li>
-          <li class="catalogMenuItem">
-            <a href="">
-              ДОМОФОННЫЕ СИСТЕМЫ
-            </a>
-          </li>
-          <li class="catalogMenuItem">
-            <a href="">
-              СИСТЕМЫ ЗАПИСИ ТЕЛЕФОННЫХ РАЗГОВОРОВ
-            </a>
-          </li>
-          <li class="catalogMenuItem">
-            <a href="">
-              СЕТЕВОЕ ОБОРУДОВАНИЕ
-            </a>
-          </li>
-          <li>
-            <button class="catalogMenuButton">
-              <img src="images/icons/catalogRightButton.png" alt="Меню каталога влево">
-            </button>
-          </li>
-        </ul>
+      <div class="headerMain">
+        <div class="headerTopRow">
+          <div class="region">
+            Ваш регион: 
+            <select>
+              <option disabled>Выберите город</option>
+              <option>Москва</option>
+              <option>Сочи</option>
+              <option>Благовещенск</option>
+              <option>Краснодар</option>
+          </select>
+          </div>
+          <div class="authorization">
+            <a href="#">Войти</a>
+            <a href="#">Личный кабинет</a>
+          </div>
+        </div>
+        <div class="headerBottomRow">
+          <div class="logo">
+            <div class="name">
+              HO<div>MY</div>RU
+            </div>
+            <div class="desc">
+              Оборудование и решения для VOIP
+            </div>
+          </div>
+          <div class="contacts">
+            <div class="callBack">
+              <a href="#">Обратный звонок</a>
+            </div>
+            <div class="contactsMain">
+              <p class="mainPhone">+7 495 2-55-44-66</p>
+              <p>(пн-пт с 9 до 18 ч)</p>
+              <div>
+                <i class="socialIcon wa"></i><i class="socialIcon viber"></i><span>+7 903 111-11-11</span>
+              </div>
+              <p><a href="mailto:info@homy.ru">info@homy.ru</a></p>
+            </div>
+          </div>
+          <div class="search">
+            <p><span>VOIP решения</span><br/>для экономных людей</p>
+            <div class="searchContainer">
+              <input type="text" placeholder="Поиск по сайту">
+              <input type="button" value="искать">
+            </div>
+          </div>
+          <div class="cart">
+            <div class="cartMain">
+              <h3>КОРЗИНА</h3>
+              <p>4 / 4000р.</p>
+            </div>
+            <div class="cartButtons">
+              <div>
+                <a href="#" class="cartButton favourite">Избранное <span>7</span></a>
+              </div>
+              <div>
+                <a href="#" class="cartButton comparison">Сравнение <span>2</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
   </div>
