@@ -18,8 +18,7 @@
     font-size: 12px;
 }
 
-.navigation > ul,
-.catalogMenu > ul {
+.navigation > ul {
     display: flex;
     list-style: none;
 }
@@ -99,6 +98,8 @@
 }
 
 .catalogMenu > ul {
+    display: flex;
+    list-style: none;
     border-radius: 10px;
     background-color: #ff5816;
     font-size: 11px;
@@ -154,5 +155,64 @@
 
 .catalogMenuButton:active {
     outline: none;
+    background-color: #ff5816;
+}
+
+.newsBlock {
+    display: flex;
+    margin-top: 20px;
+}
+
+.newsColumn {
+    flex-basis: 12.5vw;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.newsColumn h4 {
+    color: #2c3333;
+    margin-top: 14px;
+    margin-bottom: 17px;
+}
+
+.newsColumnContainer {
+    margin-top: 12px;
+}
+
+.newsColumnItem {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted gray;
+}
+
+.newsColumnItemImg {
+    margin-right: 16px;
+}
+
+.newsColumnItemInfo {
+    font-size: 14px;
+}
+
+.newsColumnItemInfo a {
+    display: block;
+    padding-bottom: 5px;
+    text-decoration: none;
+    color: #4673ab;
+}
+
+.newsColumnItemInfo a:hover {
+    color: #ff5816;
+    text-decoration: underline;
+}
+
+.newsColumn > a {
+    color: #4673ab;
+    display: block;
+    margin-top: 20px;
+}
+
+.advertisingColumn {
+    flex-grow: 7;
     background-color: #ff5816;
 }
