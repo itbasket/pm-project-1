@@ -277,3 +277,83 @@
     top: 0;
     background-image: url("../images/icons/comparison.png");
 }
+
+.newsBlock {
+    display: flex;
+    margin-top: 20px;
+}
+
+.newsColumn {
+    flex-basis: 12.5vw;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.advertisingColumn {
+    flex-grow: 7;
+    flex-direction: column;
+}
+
+.advertisingColumn .advertising {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(227, 229, 235);
+    font-family: "Roboto-Regular";
+    font-size: 16px;
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+    margin-bottom: 30px;
+}
+
+.advertisingColumn .slider {
+    position: relative;
+    height: 370px;
+}
+
+.advertisingColumn .slide img {
+    width: 100%;
+    height: 370px;
+}
+
+.advertisingColumn .slide .leftArrow,
+.advertisingColumn .slide .rightArrow {
+    width: 16px;
+    height: 44px;
+    position: absolute;
+    top: 150px;
+    cursor: pointer;
+}
+
+.advertisingColumn .slide .leftArrow {
+    left: 3%;
+    background-image: url("../images/icons/sliderLeftArrow.png");
+}
+
+.advertisingColumn .slide .rightArrow {
+    right: 3%;
+    background-image: url("../images/icons/sliderRightArrow.png");
+}
+
+.advertisingColumn .slide .dots {
+    display: flex;
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+}
+
+.advertisingColumn .slide .dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    background-color: #fff;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.advertisingColumn .slide .dot.active {
+    background-color:  rgb(255, 88, 22);;
+}
+
