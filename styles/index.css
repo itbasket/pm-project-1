@@ -560,19 +560,17 @@
     margin-top: 20px;
 }
 
-.popularProductBlock {
+.popularProductBlock,
+.keyBrandBlock {
     font-family: "Roboto-Regular";
     margin-top: 20px;
 }
 
 .newProductHeader,
 .recommendProductHeader,
-.discountProductHeader {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.popularProductHeader {
+.discountProductHeader,
+.popularProductHeader,
+.keyBrandHeader {
     display: flex;
     flex-wrap: wrap;
 }
@@ -609,14 +607,36 @@
     margin-top: 30px;
 }
 
-.popularProductHeader hr {
+.popularProductHeader h2,
+.keyBrandHeader h2 {
+    text-transform: uppercase;
+}
+
+.popularProductHeader hr,
+.keyBrandHeader hr {
     flex-grow: 1;
     height: 1px;
     margin-top: 16px;
     margin-left: 15px;
 }
 
-.popularProductItemsBlock {
+.keyBrandHeader hr {
+    margin-right: 15px;
+}
+
+.keyBrandHeader a {
+    padding-top: 5px;
+    color: #4673ab;
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+
+.keyBrandHeader a:hover {
+    color: #ff5816;
+}
+
+.popularProductItemsBlock,
+.keyBrandItemsBlock {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
@@ -685,8 +705,15 @@
     vertical-align: bottom;
 }
 
+.keyBrandItem {
+    display: flex;
+    justify-content: space-between;
+    max-width: 130px;
+    min-width: 80px;
+}
+
 .popularProductItemLink {
-    height: 20px;
+    height: 40px;
 }
 
 .popularProductItemLink a {
