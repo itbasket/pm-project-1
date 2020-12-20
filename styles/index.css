@@ -362,3 +362,45 @@
     background-color:  rgb(255, 88, 22);;
 }
 
+.popularProductHeader {
+    font-family: "Roboto-Regular";
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.popularProductHeader hr {
+    flex-grow: 1;
+    height: 1px;
+    margin-top: 16px;
+    margin-left: 15px;
+}
+
+.popularProductItemsBlock {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.popularProductItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 250px;
+    min-width: 160px;
+    vertical-align: bottom;
+}
+
+.popularProductItemLink {
+    height: 20px;
+}
+
+.popularProductItemLink a {
+    display: block;
+    color: #4673ab;
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+
+.popularProductItemLink a:hover {
+    color: #ff5816;
+}
