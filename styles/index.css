@@ -560,9 +560,19 @@
     margin-top: 20px;
 }
 
+.popularProductBlock {
+    font-family: "Roboto-Regular";
+    margin-top: 20px;
+}
+
 .newProductHeader,
 .recommendProductHeader,
 .discountProductHeader {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.popularProductHeader {
     display: flex;
     flex-wrap: wrap;
 }
@@ -594,6 +604,19 @@
 .newProductItemsBlock,
 .recommendProductItemsBlock,
 .discountProductItemsBlock{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.popularProductHeader hr {
+    flex-grow: 1;
+    height: 1px;
+    margin-top: 16px;
+    margin-left: 15px;
+}
+
+.popularProductItemsBlock {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
@@ -647,6 +670,26 @@
 .newProductItem a,
 .recommendProductItem a,
 .discountProductItem a{
+    display: block;
+    color: #4673ab;
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+
+.popularProductItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 250px;
+    min-width: 160px;
+    vertical-align: bottom;
+}
+
+.popularProductItemLink {
+    height: 20px;
+}
+
+.popularProductItemLink a {
     display: block;
     color: #4673ab;
     transition-property: color;
@@ -744,3 +787,6 @@
     content: url("../images/icons/discount.png");
 }
 
+.popularProductItemLink a:hover {
+    color: #ff5816;
+}
