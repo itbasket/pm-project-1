@@ -218,20 +218,23 @@
 
 .newProductBlock,
 .recommendProductBlock,
-.discountProductBlock {
+.discountProductBlock,
+.stockBlock{
     margin-top: 20px;
 }
 
 .newProductHeader,
 .recommendProductHeader,
-.discountProductHeader {
+.discountProductHeader,
+.stockHeader{
     display: flex;
     flex-wrap: wrap;
 }
 
 .newProductHeader hr,
 .recommendProductHeader hr,
-.discountProductHeader hr{
+.discountProductHeader hr,
+.stockHeader hr{
     flex-grow: 1;
     height: 1px;
     margin-top: 13px;
@@ -241,7 +244,8 @@
 
 .newProductHeader a,
 .recommendProductHeader a,
-.discountProductHeader a{
+.discountProductHeader a,
+.stockHeader a{
     color: #4673ab;
     transition-property: color;
     transition-duration: 0.2s;
@@ -249,13 +253,15 @@
 
 .newProductHeader a:hover,
 .recommendProductHeader a:hover,
-.discountProductHeader a:hover{
+.discountProductHeader a:hover,
+.stockHeader a:hover{
     color: #ff5816;
 }
 
 .newProductItemsBlock,
 .recommendProductItemsBlock,
-.discountProductItemsBlock{
+.discountProductItemsBlock,
+.stockItemsBlock{
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
@@ -263,7 +269,8 @@
 
 .newProductItemsBlock > button,
 .recommendProductItemsBlock > button,
-.discountProductItemsBlock > button {
+.discountProductItemsBlock > button,
+.stockItemsBlock > button{
     background-color: rgba(0,0,0,0);
     border: 0;
     outline: none;
@@ -405,4 +412,47 @@
 .discountProductItem:before {
     content: url("../images/icons/discount.png");
 }
+
+.stockItem {
+    max-width: 250px;
+    min-width: 160px;
+    border: 1px solid #dbdee6;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative;
+    transition-property: border-color;
+    transition-duration: 0.2s;
+}
+
+.stockItem a {
+    display: block;
+    color: #4673ab;
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+
+.stockItem a:first-child {
+    margin: 20px 0 13px 15px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.stockItem img{
+    width: 100%;
+}
+
+.stockItem p {
+    margin: 15px;
+}
+
+.detailsLink {
+    text-align: center;
+    font-size: 16px;
+}
+
+.detailsLink a {
+    font-size: 12px;
+}
+
 
