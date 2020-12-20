@@ -169,7 +169,7 @@
     margin-right: 30px;
 }
 
-.newsColumn h4 {
+.newsColumn h3 {
     color: #2c3333;
     margin-top: 14px;
     margin-bottom: 17px;
@@ -209,10 +209,200 @@
 .newsColumn > a {
     color: #4673ab;
     display: block;
-    margin-top: 20px;
+    margin-top: 12px;
 }
 
 .advertisingColumn {
     flex-grow: 7;
-    background-color: #ff5816;
 }
+
+.newProductBlock,
+.recommendProductBlock,
+.discountProductBlock {
+    margin-top: 20px;
+}
+
+.newProductHeader,
+.recommendProductHeader,
+.discountProductHeader {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newProductHeader hr,
+.recommendProductHeader hr,
+.discountProductHeader hr{
+    flex-grow: 1;
+    height: 1px;
+    margin-top: 13px;
+    margin-left: 25px;
+    margin-right: 13px;
+}
+
+.newProductHeader a,
+.recommendProductHeader a,
+.discountProductHeader a{
+    color: #4673ab;
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+
+.newProductHeader a:hover,
+.recommendProductHeader a:hover,
+.discountProductHeader a:hover{
+    color: #ff5816;
+}
+
+.newProductItemsBlock,
+.recommendProductItemsBlock,
+.discountProductItemsBlock{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.newProductItemsBlock > button,
+.recommendProductItemsBlock > button,
+.discountProductItemsBlock > button {
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    height: 44px;
+    margin: auto 0;
+}
+
+.newProductItem,
+.recommendProductItem,
+.discountProductItem {
+    max-width: 250px;
+    min-width: 160px;
+    border: 1px solid #dbdee6;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative;
+    transition-property: border-color;
+    transition-duration: 0.2s;
+}
+
+.newProductItem:hover,
+.recommendProductItem:hover,
+.discountProductItem:hover {
+    border-color: #ff5816;
+}
+
+.newProductItemImg,
+.recommendProductItemImg,
+.discountProductItemImg {
+    height: 180px;
+}
+
+.newProductItemImg img,
+.recommendProductItemImg img,
+.discountProductItemImg img{
+    display: block;
+    margin: auto;
+}
+
+.newProductItem a,
+.recommendProductItem a,
+.discountProductItem a{
+    display: block;
+    color: #4673ab;
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+
+.newProductItem a:hover,
+.recommendProductItem a:hover,
+.discountProductItem a:hover{
+    color: #ff5816;
+
+}
+
+.newProductItemPriceBlock,
+.recommendProductItemPriceBlock,
+.discountProductItemPriceBlock {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.oldPrice {
+    color: #ff5816;
+    text-decoration: line-through;
+}
+
+.newProductItemBuyLine,
+.recommendProductItemBuyLine,
+.discountProductItemBuyLine {
+    margin-top: 15px;
+    display: flex;
+}
+
+.newProductItemBuyButton,
+.recommendProductItemBuyButton,
+.discountProductItemBuyButton {
+    display: flex;
+    background-color: #ff5816;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    box-shadow: 0 4px 0 0 #c64411;
+    transition-property: box-shadow, background-color;
+    transition-duration: 0.2s;
+}
+
+.newProductItemBuyButton:active,
+.recommendProductItemBuyButton:active,
+.discountProductItemBuyButton:active {
+    background-color: #4673ab;
+    box-shadow: 0 4px 0 0 #365884;
+}
+
+.newProductItemBuyButton img,
+.recommendProductItemBuyButton img,
+.discountProductItemBuyButton img {
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.newProductItemBuyLine a,
+.recommendProductItemBuyLine a,
+.discountProductItemBuyLine a{
+    padding-top: 16px;
+    padding-left: 15px;
+}
+
+.newProductItem:before,
+.recommendProductItem:before,
+.discountProductItem:before {
+    position: absolute;
+    top: -1px;
+}
+
+.newProductItem:before {
+    content: url("../images/icons/new.png");
+}
+
+.recommendProductItem:before {
+    content: url("../images/icons/recommend.png");
+}
+
+.discountProductItem:before {
+    content: url("../images/icons/discount.png");
+}
+
