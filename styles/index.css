@@ -559,12 +559,13 @@
 .discountProductBlock,
 .stockBlock{
     margin-top: 20px;
+    font-family: "Roboto-Regular", sans-serif;
 }
 
 .popularProductBlock,
 .keyBrandBlock {
     font-family: "Roboto-Regular", sans-serif;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .newProductHeader,
