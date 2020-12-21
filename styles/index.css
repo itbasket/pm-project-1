@@ -367,7 +367,8 @@
 .advantageBlock,
 .reasonBlock,
 .numberBlock,
-.workBlock {
+.workBlock,
+.descriptionBlock {
     font-family: "Roboto-Regular", sans-serif;
     margin-top: 20px;
 }
@@ -384,7 +385,8 @@
 .advantageHeader,
 .reasonHeader,
 .numberHeader,
-.workHeader {
+.workHeader,
+.descriptionHeader {
     display: flex;
     flex-wrap: wrap;
 }
@@ -404,7 +406,8 @@
 .advantageHeader hr,
 .reasonHeader hr,
 .numberHeader hr,
-.workHeader hr {
+.workHeader hr,
+.descriptionHeader hr {
     flex-grow: 1;
     height: 1px;
     margin-top: 16px;
@@ -417,6 +420,10 @@
 
 .advantageHeader hr {
     border: 1px solid #fff;
+}
+
+.descriptionHeader hr {
+    margin-left: 0;
 }
 
 .keyBrandHeader a {
@@ -726,4 +733,23 @@
     left: 0;
     top: 0;
     background-image: url("../images/icons/workPaymentIcon.png");
+}
+
+.descriptionContent {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+.descriptionContent > div {
+    max-width: 48%;
+}
+
+.descriptionContent p {
+    margin-bottom: 20px;
+}
+
+.descriptionContent a {
+    color: rgb(255, 88, 22);
 }
