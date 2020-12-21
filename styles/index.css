@@ -556,13 +556,14 @@
 
 .newProductBlock,
 .recommendProductBlock,
-.discountProductBlock {
+.discountProductBlock,
+.stockBlock{
     margin-top: 20px;
 }
 
 .popularProductBlock,
 .keyBrandBlock {
-    font-family: "Roboto-Regular";
+    font-family: "Roboto-Regular", sans-serif;
     margin-top: 20px;
 }
 
@@ -570,14 +571,16 @@
 .recommendProductHeader,
 .discountProductHeader,
 .popularProductHeader,
-.keyBrandHeader {
+.keyBrandHeader,
+.stockHeader {
     display: flex;
     flex-wrap: wrap;
 }
 
 .newProductHeader hr,
 .recommendProductHeader hr,
-.discountProductHeader hr{
+.discountProductHeader hr,
+.stockHeader hr{
     flex-grow: 1;
     height: 1px;
     margin-top: 13px;
@@ -587,7 +590,8 @@
 
 .newProductHeader a,
 .recommendProductHeader a,
-.discountProductHeader a{
+.discountProductHeader a,
+.stockHeader a{
     color: #4673ab;
     transition-property: color;
     transition-duration: 0.2s;
@@ -595,13 +599,15 @@
 
 .newProductHeader a:hover,
 .recommendProductHeader a:hover,
-.discountProductHeader a:hover{
+.discountProductHeader a:hover,
+.stockHeader a:hover{
     color: #ff5816;
 }
 
 .newProductItemsBlock,
 .recommendProductItemsBlock,
-.discountProductItemsBlock{
+.discountProductItemsBlock,
+.stockItemsBlock{
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
@@ -644,7 +650,8 @@
 
 .newProductItemsBlock > button,
 .recommendProductItemsBlock > button,
-.discountProductItemsBlock > button {
+.discountProductItemsBlock > button,
+.stockItemsBlock > button{
     background-color: rgba(0,0,0,0);
     border: 0;
     outline: none;
@@ -817,3 +824,91 @@
 .popularProductItemLink a:hover {
     color: #ff5816;
 }
+
+.stockItem {
+    max-width: 230px;
+    min-width: 160px;
+    border: 1px solid #dbdee6;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative;
+    transition-property: border-color;
+    transition-duration: 0.2s;
+}
+
+.stockItem a {
+    display: block;
+    color: #4673ab;
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+
+.stockItem a:first-child {
+    margin: 20px 0 13px 15px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.stockItem img{
+    width: 100%;
+}
+
+.stockItem > p {
+    margin: 15px;
+}
+
+.stockItemValidityBlock {
+    display: flex;
+    background-color: #dbdee6;
+    padding: 16px 10px 10px 15px;
+    min-height: 76px;
+}
+
+.stockItemValidityBlock > p {
+    display: block;
+    min-width: 70px;
+    max-width: 80px;
+}
+
+.timer {
+    margin-top: 8px;
+    display: flex;
+    text-align: center;
+    color: #989da0;
+}
+
+.timer p {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.timer > p {
+    margin-top: 0;
+    font-size: 22px;
+    color: #337500;
+}
+
+.days > span,
+.hours > span,
+.minutes > span {
+    background-color: #262626;
+    padding: 5px 3px;
+    color: #dbdee6;
+    font-size: 18px;
+}
+
+.timerColon {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.detailsLink {
+    text-align: center;
+    font-size: 16px;
+}
+
+.detailsLink a {
+    font-size: 12px;
+}
+
