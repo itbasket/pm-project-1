@@ -359,13 +359,14 @@
 }
 
 .advertisingColumn .slide .dot.active {
-    background-color:  rgb(255, 88, 22);;
+    background-color:  rgb(255, 88, 22);
 }
 
 .popularProductBlock,
 .keyBrandBlock,
 .advantageBlock,
-.reasonBlock {
+.reasonBlock,
+.numberBlock {
     font-family: "Roboto-Regular";
     margin-top: 20px;
 }
@@ -380,7 +381,8 @@
 .popularProductHeader,
 .keyBrandHeader,
 .advantageHeader,
-.reasonHeader {
+.reasonHeader,
+.numberHeader {
     display: flex;
     flex-wrap: wrap;
 }
@@ -389,14 +391,16 @@
 .keyBrandHeader h2,
 .advantageHeader h2,
 .reasonHeader h2,
-.reasonItemHeader {
+.reasonItemHeader,
+.numberHeader h2 {
     text-transform: uppercase;
 }
 
 .popularProductHeader hr,
 .keyBrandHeader hr,
 .advantageHeader hr,
-.reasonHeader hr {
+.reasonHeader hr,
+.numberHeader hr {
     flex-grow: 1;
     height: 1px;
     margin-top: 16px;
@@ -425,7 +429,8 @@
 .popularProductItemsBlock,
 .keyBrandItemsBlock,
 .advantageItemsBlock,
-.reasonItemsBlock {
+.reasonItemsBlock,
+.numberItemsBlock {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
@@ -450,6 +455,10 @@
 .advantageItem {
     min-width: 100px;
     max-width: 230px;
+}
+
+.numberItem {
+    width: 180px;
 }
 
 .reasonItem {
@@ -528,13 +537,47 @@
 
 .reasonItemContent li span {
     color: #000;
-  }
+}
 
 .advantageItemImg {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin: 0 auto;
+}
+
+.numberItemImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 130px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    margin: 0 auto;
+    font-weight: bold;
+    line-height: 0.8;
+}
+
+.numberItem:nth-child(odd) {
+    color: rgb(255, 88, 22);
+}
+
+.numberItem:nth-child(even) {
+    color: rgb(57, 74, 92);
+}
+
+.numberItemImg.big {
+    font-size: 80px;
+}
+
+.numberItemImg.medium {
+    font-size: 54px;
+}
+
+.numberItemImg.small {
+    font-size: 40px;
 }
 
 .advantageItemImg.consultation {
@@ -553,12 +596,14 @@
     background: url("../images/icons/advantagePickPoint.png") #fff 50% 45% no-repeat;
 }
 
-.advantageDescription {
+.advantageDescription,
+.numberDescription {
     font-size: 14px;
     font-weight: 600;
     text-align: center;
     text-transform: uppercase;
     margin-top: 20px;
+    color: #000;
 }
 
 .popularProductItemLink {
