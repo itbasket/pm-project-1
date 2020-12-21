@@ -414,7 +414,7 @@
 }
 
 .stockItem {
-    max-width: 250px;
+    max-width: 230px;
     min-width: 160px;
     border: 1px solid #dbdee6;
     border-radius: 10px;
@@ -442,8 +442,53 @@
     width: 100%;
 }
 
-.stockItem p {
+.stockItem > p {
     margin: 15px;
+}
+
+.stockItemValidityBlock {
+    display: flex;
+    background-color: #dbdee6;
+    padding: 16px 10px 10px 15px;
+    min-height: 76px;
+}
+
+.stockItemValidityBlock > p {
+    display: block;
+    min-width: 70px;
+    max-width: 80px;
+}
+
+.timer {
+    margin-top: 8px;
+    display: flex;
+    text-align: center;
+    color: #989da0;
+}
+
+.timer p {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.timer > p {
+    margin-top: 0;
+    font-size: 22px;
+    color: #337500;
+}
+
+.days > span,
+.hours > span,
+.minutes > span {
+    background-color: #262626;
+    padding: 5px 3px;
+    color: #dbdee6;
+    font-size: 18px;
+}
+
+.timerColon {
+    font-size: 18px;
+    font-weight: 900;
 }
 
 .detailsLink {
