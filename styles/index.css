@@ -586,6 +586,7 @@
 .discountProductHeader,
 .popularProductHeader,
 .keyBrandHeader,
+.stockHeader,
 .advantageHeader {
     display: flex;
     flex-wrap: wrap;
