@@ -74,7 +74,7 @@
     line-height: 100%;
     padding: 0 3px;
     border-radius: 11px;
-    background: url("../images/headerBg.jpg") rgb(54, 62, 72);
+    background: url("../images/icons/headerBg.jpg") rgb(54, 62, 72);
     background-size: cover;
     width: 75px;
     height: 46px;    
@@ -209,7 +209,7 @@
     position: relative;
     width: 196px;
     height: 52px;
-    background: url("../images/headerBg.jpg") rgb(54, 62, 72);
+    background: url("../images/icons/headerBg.jpg") rgb(54, 62, 72);
     background-size: cover;
     border-radius: 8px;
     padding: 10px 57px;
