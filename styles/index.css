@@ -12,6 +12,7 @@
 .mainMenuBackground,
 .navigation {
     background-color: black;
+    font-family: "Roboto-Regular", sans-serif;
 }
 
 .navigation > ul {
@@ -95,6 +96,7 @@
 
 .catalogMenu {
     margin-top: 22px;
+    font-family: "Roboto-Regular", sans-serif;
 }
 
 .catalogMenu > ul {
@@ -192,6 +194,7 @@
 
 .newsColumnItemInfo {
     font-size: 14px;
+    font-family: "Roboto-Regular", sans-serif;
 }
 
 .newsColumnItemInfo a {
@@ -221,6 +224,7 @@
 .discountProductBlock,
 .stockBlock{
     margin-top: 20px;
+    font-family: "Roboto-Regular", sans-serif;
 }
 
 .newProductHeader,
@@ -500,4 +504,11 @@
     font-size: 12px;
 }
 
+.upperFooter {
+    background-color: #5c7489;
+}
 
+
+.lowerFooter {
+    background-color: #2c3f53;
+}
