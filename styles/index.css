@@ -560,7 +560,7 @@
 .newProductBlock,
 .recommendProductBlock,
 .discountProductBlock,
-.stockBlock{
+.stockBlock {
     margin-top: 20px;
     font-family: "Roboto-Regular", sans-serif;
 }
@@ -572,7 +572,8 @@
 }
 
 .keyBrandBlock,
-.advantageBlock {
+.advantageBlock,
+.reasonBlock {
     font-family: "Roboto-Regular", sans-serif;
     margin-top: 20px;
 }
@@ -582,8 +583,6 @@
     background-color: rgb(227, 229, 235);
     border-radius: 10px;
     padding: 30px 20px;
-=======
->>>>>>> Variant-1
 }
 
 .newProductHeader,
@@ -592,7 +591,8 @@
 .popularProductHeader,
 .keyBrandHeader,
 .stockHeader,
-.advantageHeader {
+.advantageHeader,
+.reasonHeader {
     display: flex;
     flex-wrap: wrap;
 }
@@ -635,13 +635,16 @@
 
 .popularProductHeader h2,
 .keyBrandHeader h2,
-.advantageHeader h2 {
+.advantageHeader h2,
+.reasonHeader h2,
+.reasonItemHeader {
     text-transform: uppercase;
 }
 
 .popularProductHeader hr,
 .keyBrandHeader hr,
-.advantageHeader hr {
+.advantageHeader hr,
+.reasonHeader hr {
     flex-grow: 1;
     height: 1px;
     margin-top: 16px;
@@ -669,7 +672,8 @@
 
 .popularProductItemsBlock,
 .keyBrandItemsBlock,
-.advantageItemsBlock {
+.advantageItemsBlock,
+.reasonItemsBlock {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
@@ -750,6 +754,84 @@
     min-width: 100px;
     max-width: 230px;
 }
+
+.reasonItem {
+    min-width: 450px;
+    width: 47%;
+    min-height: 360px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.reasonItem.competitorReason {
+    border: 1px solid rgb(203,11,19);
+}
+
+.reasonItem.ourReason {
+    border: 1px solid rgb(22,163,51);
+}
+
+.reasonItemHeader {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 20%;
+    font-size: 14px;
+    color: #fff;
+    padding: 0 80px;
+}
+
+.reasonItem.competitorReason .reasonItemHeader {
+    background-color: rgb(203,11,19);
+}
+
+.reasonItem.ourReason .reasonItemHeader {
+    background-color: rgb(22,163,51);
+}
+
+.reasonItem.competitorReason .reasonItemHeader p::before {
+    content: "";
+    height: 23px;
+    width: 23px;
+    position: absolute;
+    left: 40px;
+    top: 35%;
+    background-image: url("../images/icons/crossIcon.png");
+}
+
+.reasonItem.ourReason .reasonItemHeader p::before {
+    content: "";
+    height: 20px;
+    width: 29px;
+    position: absolute;
+    left: 40px;
+    top: 35%;
+    background-image: url("../images/icons/checkIcon.png");
+}
+
+.reasonItemContent {
+    padding: 20px 30px 20px 50px;
+}
+
+.reasonItemContent ul {
+    font-size: 14px;
+}
+
+.reasonItem.competitorReason .reasonItemContent ul {
+    color: rgb(203,11,19);
+}
+
+.reasonItem.ourReason .reasonItemContent ul {
+    color: rgb(22,163,51);
+}
+
+.reasonItemContent li {
+    margin-bottom: 10px;
+}
+
+.reasonItemContent li span {
+    color: #000;
+  }
 
 .advantageItemImg {
     width: 100px;
