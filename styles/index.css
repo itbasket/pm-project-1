@@ -574,8 +574,9 @@
 .keyBrandBlock,
 .advantageBlock,
 .reasonBlock,
-.numberBlock {
-    font-family: "Roboto-Regular";
+.numberBlock,
+.workBlock {
+    font-family: "Roboto-Regular", sans-serif;
     margin-top: 20px;
 }
 
@@ -594,7 +595,8 @@
 .stockHeader,
 .advantageHeader,
 .reasonHeader,
-.numberHeader {
+.numberHeader,
+.workHeader {
     display: flex;
     flex-wrap: wrap;
 }
@@ -640,7 +642,8 @@
 .advantageHeader h2,
 .reasonHeader h2,
 .reasonItemHeader,
-.numberHeader h2 {
+.numberHeader h2,
+.workHeader h2 {
     text-transform: uppercase;
 }
 
@@ -648,7 +651,8 @@
 .keyBrandHeader hr,
 .advantageHeader hr,
 .reasonHeader hr,
-.numberHeader hr {
+.numberHeader hr,
+.workHeader hr {
     flex-grow: 1;
     height: 1px;
     margin-top: 16px;
@@ -1210,3 +1214,107 @@ footer p,
     width: 88px;
     height: 31px;
 }
+
+.workTabs {
+    display: flex;
+    margin-top: 30px;
+}
+
+.workTab {
+    background-color: rgb(219, 222, 230);
+    border-radius: 7px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 15px 25px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.workTab:hover {
+    background-color: rgb(192, 191, 191);
+}
+
+.workTab.active {
+    background-color: #fff;
+}
+
+.workTab span {
+    color: rgb(255, 88, 22);
+    border-bottom: 1px dotted rgb(255, 88, 22);
+}
+
+.workTab.active span {
+    color: #000;
+    border: none;
+}
+
+.workContent {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.workItem {
+    position: relative;
+    max-width: 250px;
+}
+
+.workItem.workPhone,
+.workItem.workApprove {
+    padding-left: 37px;
+}
+
+.workItem.workShipping {
+    padding-left: 53px;
+}
+
+.workItem.workPayment {
+    padding-left: 40px;
+}
+
+.workItem.workArrow {
+    min-width: 45px;
+    background: url("../images/icons/workArrowIcon.png") 0 10% no-repeat;
+}
+
+.workItem.workPhone::before {
+    content: "";
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("../images/icons/workPhoneIcon.png");
+}
+
+.workItem.workApprove::before {
+    content: "";
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("../images/icons/workApproveIcon.png");
+}
+
+.workItem.workShipping::before {
+    content: "";
+    height: 34px;
+    width: 48px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("../images/icons/workShippingIcon.png");
+}
+
+.workItem.workPayment::before {
+    content: "";
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("../images/icons/workPaymentIcon.png");
+}
+
