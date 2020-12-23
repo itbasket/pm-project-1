@@ -15,6 +15,10 @@
     font-family: "Roboto-Regular", sans-serif;
 }
 
+.mobileMenu {
+    display: none;
+}
+
 .navigation > ul {
     font-size: 12px;
 }
@@ -235,6 +239,10 @@
     flex-wrap: wrap;
 }
 
+.linkToAllMobile {
+    display: none;
+}
+
 .newProductHeader hr,
 .recommendProductHeader hr,
 .discountProductHeader hr,
@@ -246,7 +254,7 @@
     margin-right: 13px;
 }
 
-.newProductHeader a,
+.linkToAll,
 .recommendProductHeader a,
 .discountProductHeader a,
 .stockHeader a{
@@ -260,6 +268,10 @@
 .discountProductHeader a:hover,
 .stockHeader a:hover{
     color: #ff5816;
+}
+
+.mobileCarousel {
+    display: none;
 }
 
 .newProductItemsBlock,
@@ -611,4 +623,8 @@ footer p,
 .lowerFooterContent img {
     width: 88px;
     height: 31px;
+}
+
+.mobileFooter {
+    display: none;
 }

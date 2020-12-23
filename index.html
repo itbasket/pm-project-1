@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="styles/fonts.css">
   <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/mobile.css">
   <title>Homework №3</title>
 </head>
 <body>
@@ -53,6 +54,45 @@
       </ul>
     </nav>
   </div>
+
+  <nav class="mobileMenu">
+    <div>
+      <input type="checkbox" id="burgerMenu">
+      <label for="burgerMenu"><span id="menu-icon"></span>Меню</label>
+      <div id="overlay">
+        <ul>
+          <li>
+            <a href="#">Каталог</a>
+          </li>
+          <li>
+            <a href="#">О компании</a>
+          </li>
+          <li>
+            <a href="#">Оплата и доставка</a>
+          </li>
+          <li>
+            <a href="#">Гарантии и возврат</a>
+          </li>
+          <li>
+            <a href="#">Сотрудничество</a>
+          </li>
+          <li>
+            <a href="#">Услуги</a>
+          </li>
+          <li>
+            <a href="#">Решения</a>
+          </li>
+          <li>
+            <a href="#">Техподдержка</a>
+          </li>
+          <li>
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <div class="wrapper">
     <header>
       <div class="catalogMenu">
@@ -170,8 +210,19 @@
       <div class="newProductBlock">
         <div class="newProductHeader">
           <h2>Новинки</h2>
+          <a href="#" class="linkToAllMobile">
+            <img src="images/icons/linkToAll.png" alt="Все новинки">
+          </a>
           <hr>
-          <a href="#">Все новинки</a>
+          <a href="#" class="linkToAll">Все новинки</a>
+          <div class="mobileCarousel">
+            <button>
+              <img src="images/icons/carouselLeftButtonMobile.png" alt="">
+            </button>
+            <button>
+              <img src="images/icons/carouselRightButtonMobile.png" alt="">
+            </button>
+          </div>
         </div>
         <div class="newProductItemsBlock">
           <button>
@@ -266,8 +317,19 @@
       <div class="recommendProductBlock">
         <div class="recommendProductHeader">
           <h2>Рекомендуем</h2>
+          <a href="#" class="linkToAllMobile">
+            <img src="images/icons/linkToAll.png" alt="Все новинки">
+          </a>
           <hr>
-          <a href="#">Все рекомендации</a>
+          <a href="#" class="linkToAll">Все рекомендации</a>
+          <div class="mobileCarousel">
+            <button>
+              <img src="images/icons/carouselLeftButtonMobile.png" alt="">
+            </button>
+            <button>
+              <img src="images/icons/carouselRightButtonMobile.png" alt="">
+            </button>
+          </div>
         </div>
         <div class="recommendProductItemsBlock">
           <button>
@@ -362,8 +424,19 @@
       <div class="discountProductBlock">
         <div class="discountProductHeader">
           <h2>Распродажа</h2>
+          <a href="#" class="linkToAllMobile">
+            <img src="images/icons/linkToAll.png" alt="Все новинки">
+          </a>
           <hr>
-          <a href="#">Все товары</a>
+          <a href="#" class="linkToAll">Все товары</a>
+          <div class="mobileCarousel">
+            <button>
+              <img src="images/icons/carouselLeftButtonMobile.png" alt="">
+            </button>
+            <button>
+              <img src="images/icons/carouselRightButtonMobile.png" alt="">
+            </button>
+          </div>
         </div>
         <div class="discountProductItemsBlock">
           <button>
@@ -458,8 +531,19 @@
       <div class="stockBlock">
         <div class="stockHeader">
           <h2>Акции</h2>
+          <a href="#" class="linkToAllMobile">
+            <img src="images/icons/linkToAll.png" alt="Все новинки">
+          </a>
           <hr>
-          <a href="#">Все акции</a>
+          <a href="#" class="linkToAll">Все акции</a>
+          <div class="mobileCarousel">
+            <button>
+              <img src="images/icons/carouselLeftButtonMobile.png" alt="">
+            </button>
+            <button>
+              <img src="images/icons/carouselRightButtonMobile.png" alt="">
+            </button>
+          </div>
         </div>
         <div class="stockItemsBlock">
           <button>
@@ -639,6 +723,102 @@
         </p>
         <img src="images/icons/footerData.png" alt="Footer data">
       </div>
+    </div>
+  </footer>
+
+  <footer class="mobileFooter">
+    <input type="checkbox" id="mobileFooterDeliveryCheck">
+    <label for="mobileFooterDeliveryCheck">Доставка и оплата<span></span></label>
+    <ul>
+      <li>
+        <a href="#">Lorem ipsun</a>
+      </li>
+      <li>
+        <a href="#">Lorem ipsun</a>
+      </li>
+      <li>
+        <a href="#">Lorem ipsun</a>
+      </li>
+    </ul>
+    <input type="checkbox" id="mobileFooterWarrantyCheck">
+    <label for="mobileFooterWarrantyCheck">Гарантии и возврат<span> </span></label>
+    <ul>
+      <li>
+        <a href="#">Lorem ipsun</a>
+      </li>
+      <li>
+        <a href="#">Lorem ipsun</a>
+      </li>
+      <li>
+        <a href="#">Lorem ipsun</a>
+      </li>
+    </ul>
+    <input type="checkbox" id="mobileFooterSupportCheck">
+    <label for="mobileFooterSupportCheck">Техподдержка<span> </span></label>
+    <ul>
+      <li>
+        <a href="#">Lorem ipsun</a>
+      </li>
+      <li>
+        <a href="#">Lorem ipsun</a>
+      </li>
+      <li>
+        <a href="#">Lorem ipsun</a>
+      </li>
+    </ul>
+    <input type="checkbox" id="mobileFooterContacts">
+    <label for="mobileFooterContacts">Контакты<span> </span></label>
+    <ul>
+      <li>
+        <a href="#">Lorem ipsun</a>
+      </li>
+      <li>
+        <a href="#">Lorem ipsun</a>
+      </li>
+      <li>
+        <a href="#">Lorem ipsun</a>
+      </li>
+    </ul>
+    
+    <div class="mobileFooterFirstLine">
+      <div class="mobileFooterLeftColumn">
+        <img src="images/icons/logoFooter.png" alt="">
+        <p>&#169; ХомиРу, 2006-2016</p>
+      </div>
+      <div class="mobileFooterRightColumn">
+        <a href="tel:+74952553466">+7 495 2-55-44-66</a>
+        <div class="mobileFooterTelephone">
+          <a target="_blank" href="https://api.whatsapp.com/send?phone=+79031111111">
+            <img src="images/icons/whatsappIcon.png" alt="Whatsapp">
+          </a>
+          <a href="viber://contact?number=%+7903111111">
+            <img src="images/icons/viberIcon.png" alt="Viber">
+          </a>
+          <p>+7 903 111-11-11</p>
+        </div>
+        <div class="mobileFooterSkype">
+          <img src="images/icons/skypeLogo.png" alt="Skype">
+          <p>skype-on.06</p>
+        </div>
+        <a href="mailto: info@homy.ru">info@homy.ru</a>
+      </div>
+    </div>
+    <div class="mobileFooterSecondLine">
+      <p>Перепечатка материалов возможна только с активной ссылкой на homy.ru</p>
+      <div class="mobileFooterSocialLinks">
+          <a target="_blank" href="http://vk.com/">
+            <img src="images/icons/vkIcon.png" alt="VK">
+          </a>
+          <a target="_blank" href="https://www.facebook.com/">
+            <img src="images/icons/facebookIcon.png" alt="Facebook">
+          </a>
+          <a target="_blank" href="https://twitter.com/?lang=en">
+            <img src="images/icons/twitterIcon.png" alt="Twitter">
+          </a>
+        </div>
+    </div>
+    <div class="mobileFooterThirdLine">
+      <img src="images/icons/footerData.png" alt="Data">
     </div>
   </footer>
 </body>
