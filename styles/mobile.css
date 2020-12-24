@@ -70,6 +70,7 @@
 }
 
 @media all and (max-width: 750px) {
+    .headerMain .authorization > a:nth-child(1),
     .advertisingColumn,
     .popularProductBlock,
     .keyBrandBlock,
@@ -77,5 +78,44 @@
     .reasonBlock,
     .numberBlock {
         display: none;
+    }
+
+    .headerMain .authorization {
+        min-width: 10px;
+    }
+
+    .workItem.workPhone,
+    .workItem.workApprove,
+    .workItem.workShipping,
+    .workItem.workPayment {
+        width: 40%;
+        min-width: 125px;
+        padding: 50px 20px 30px;
+    }
+
+    .workItem.workPhone::before,
+    .workItem.workApprove::before,
+    .workItem.workShipping::before,
+    .workItem.workPayment::before {
+        left: 40%;
+    }
+
+    .workItem.workArrow {
+        width: 10%;
+    }
+
+    .workItem.workArrow:nth-child(4) {
+        display: none;
+    }
+
+    .workTabs,
+    .workContent {
+        flex-wrap: wrap;
+    }
+
+    .workTab {
+        font-size: 12px;
+        padding: 10px;
+        margin-bottom: 10px;
     }
 }
