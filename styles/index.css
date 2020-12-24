@@ -91,9 +91,8 @@
 
 .contacts {
     display: flex; 
-    justify-content: space-between;
-    width: 315px;
-    padding: 0 10px;
+    justify-content: center;
+    min-width: 315px;
 }
 
 .contacts .callBack {
@@ -114,10 +113,11 @@
 
 .contacts .contactsMain {
     font-size: 14px;
+    padding-left: 15px;
 }
 
 .contacts .mainPhone {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -142,6 +142,7 @@
 
 .search {
     position: relative;
+    min-width: 260px;
 }
 
 .search p {
@@ -199,6 +200,21 @@
 .search input[type="button"]:focus {
     background-color: #4673ab;
     border-bottom: #284263 3px solid;
+}
+
+.searchMobile {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+}
+
+.searchMobile button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
 }
 
 .cart {
@@ -307,6 +323,7 @@
     text-align: center;
     line-height: 50px;
     margin-bottom: 30px;
+    overflow: hidden;
 }
 
 .advertisingColumn .slider {
@@ -426,15 +443,23 @@
     margin-left: 0;
 }
 
-.keyBrandHeader a {
+.keyBrandHeader .linkToAll {
     padding-top: 5px;
     color: #4673ab;
     transition-property: color;
     transition-duration: 0.2s;
 }
 
-.keyBrandHeader a:hover {
+.keyBrandHeader .linkToAll:hover {
     color: #ff5816;
+}
+
+.linkToAllMobile {
+    display: none;
+}
+
+.mobileCarousel {
+    display: none;
 }
 
 .popularProductItemsBlock,

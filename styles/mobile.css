@@ -1,0 +1,82 @@
+@media all and (max-width: 980px) {
+    .contacts {
+        width: 500px;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .searchMobile {
+        display: flex;
+    }
+
+    .linkToAll {
+        display: none;
+    }
+
+    .linkToAllMobile {
+        display: block;
+        margin-top: 5px;
+        margin-left: 20px;
+    }
+
+    .mobileCarousel {
+        display: block;
+    }
+
+    .mobileCarousel button {
+        background-color: rgba(0,0,0,0);
+        border: 1px solid #dbdee6;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+    }
+
+    .advertisingColumn .advertising{
+        font-size: 12px;
+    }
+
+    .popularProductItem:nth-child(4) {
+        display: none;
+    }
+
+    .keyBrandItem:nth-child(n+8) {
+        display: none;
+    }
+
+    .reasonItem {
+        min-width: 350px;
+    }
+
+    .numberHeader hr {
+        margin-right: 15px;
+    }
+
+    .numberItem:nth-child(n+5) {
+        display: none;
+    }
+}
+
+@media all and (max-width: 750px) {
+    .contactsMain {
+        text-align: right;
+    }
+    
+    .advertisingColumn .advertising{
+        font-size: 10px;
+    }
+
+    .keyBrandItem:nth-child(n+6) {
+        display: none;
+    }
+
+    .reasonItemsBlock {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reasonItem {
+        margin-bottom: 15px;
+    }
+}
