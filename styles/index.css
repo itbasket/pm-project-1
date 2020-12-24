@@ -371,7 +371,7 @@
 
 .price {
     font-size: 18px;
-    font-weight: 800;
+    font-family: "Roboto Bold", sans-serif;
 }
 
 .oldPrice {
@@ -465,7 +465,7 @@
 .stockItem a:first-child {
     margin: 20px 0 13px 15px;
     font-size: 18px;
-    font-weight: 700;
+    font-family: "Roboto Bold", sans-serif;
 }
 
 .stockItem img{
@@ -518,7 +518,7 @@
 
 .timerColon {
     font-size: 18px;
-    font-weight: 900;
+    font-family: "Roboto Bold", sans-serif;
 }
 
 .detailsLink {
