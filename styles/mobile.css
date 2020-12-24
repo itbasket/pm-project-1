@@ -128,10 +128,21 @@
         flex-basis: 25vw;
     }
 
-    .linkToAll {
+    .contacts {
+        width: 500px;
+    }
+
+    .search {
         display: none;
     }
 
+    .searchMobile {
+        display: flex;
+    }
+
+    .linkToAll {
+        display: none;
+    }
 
     .linkToAllMobile {
         display: block;
@@ -193,6 +204,30 @@
     }
 
     .upperFooterFourthColumn > a {
+        display: none;
+    }
+
+    .advertisingColumn .advertising{
+        font-size: 12px;
+    }
+
+    .popularProductItem:nth-child(4) {
+        display: none;
+    }
+
+    .keyBrandItem:nth-child(n+8) {
+        display: none;
+    }
+
+    .reasonItem {
+        min-width: 350px;
+    }
+
+    .numberHeader hr {
+        margin-right: 15px;
+    }
+
+    .numberItem:nth-child(n+5) {
         display: none;
     }
 }
@@ -372,5 +407,28 @@
         text-align: center;
         padding-top: 15px;
         padding-bottom: 15px;
+    }
+}
+
+@media all and (max-width: 750px) {
+    .contactsMain {
+        text-align: right;
+    }
+    
+    .advertisingColumn .advertising{
+        font-size: 10px;
+    }
+
+    .keyBrandItem:nth-child(n+6) {
+        display: none;
+    }
+
+    .reasonItemsBlock {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reasonItem {
+        margin-bottom: 15px;
     }
 }
