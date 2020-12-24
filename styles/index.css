@@ -42,6 +42,7 @@
 }
 
 .navigation > ul > li a{
+    display: block;
     color: white;
     text-decoration: none;
     font-weight: 100;
@@ -60,9 +61,16 @@
 
 #firstDropdown:after,
 #secondDropdown:after {
+    display: inline-block;
     position: relative;
     left: 5px;
     content: url("../images/icons/orangeTriangleForMenu.png");
+    transition-duration: 0.2s;
+}
+
+#firstDropdown:hover:after,
+#secondDropdown:hover:after {
+    transform: rotate(180deg);
 }
 
 #firstDropdownContent,
@@ -70,17 +78,18 @@
     background-color: black;
     position: absolute;
     display: none;
-    top: 46px;
+    top: 28px;
     text-align: center;
     min-width: 150px;
 }
 
 #firstDropdown:hover ~ #firstDropdownContent,
-#secondDropdown:hover ~ #secondDropdownContent{
+#firstDropdownContent:hover,
+#secondDropdown:hover ~ #secondDropdownContent,
+#secondDropdownContent:hover {
     display: flex;
     flex-direction: column;
 }
-
 
 #firstDropdownContent a,
 #secondDropdownContent a{
@@ -91,6 +100,11 @@
 #firstDropdownContent a:after,
 #secondDropdownContent a:after {
     content: '';
+}
+
+#firstDropdownContent a:first-child,
+#secondDropdownContent a:first-child {
+    margin-top: 12px;
 }
 
 #firstDropdownContent a:last-child,
@@ -518,6 +532,7 @@
 
 footer {
     font-family: "Roboto-Regular", sans-serif;
+    margin-top: 20px;
 }
 
 footer p,
@@ -558,6 +573,23 @@ footer p,
     margin-top: 10px;
 }
 
+.upperFooterThirdColumn a:last-child,
+.upperFooterFourthColumn > a{
+    text-align: center;
+    display: block;
+    background-image: url("../images/icons/callbackFooter.png");
+    padding-top: 10px;
+    padding-right: 15px;
+    width: 112px;
+    height: 57px;
+    color: #84a2c7;
+    text-decoration: underline dotted;
+}
+
+.upperFooterThirdColumn a:last-child {
+    display: none;
+}
+
 .upperFooterFourthColumn,
 .upperFooterFourthColumnViberLinks{
     display: flex;
@@ -571,18 +603,6 @@ footer p,
 .upperFooterFourthColumn h3 {
     font-weight: 500;
     letter-spacing: 2px;
-}
-
-.upperFooterFourthColumn > a{
-    text-align: center;
-    display: block;
-    background-image: url("../images/icons/callbackFooter.png");
-    padding-top: 10px;
-    padding-right: 15px;
-    width: 112px;
-    height: 57px;
-    color: #84a2c7;
-    text-decoration: underline dotted;
 }
 
 .upperFooterFourthColumnViberLinks img {

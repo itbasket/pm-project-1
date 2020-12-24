@@ -1,4 +1,4 @@
-@media all and (max-width: 980px) {
+@media all and (max-width: 1140px) {
     .navigation {
         display: none;
     }
@@ -177,19 +177,25 @@
         margin-right: 5px;
     }
 }
+@media all and (max-width: 980px) {
+    .newsColumn {
+        flex-basis: 35vw;
+    }
 
-@media all and (max-width: 900px) {
     .newProductItem:nth-child(n+5),
     .recommendProductItem:nth-child(n+5),
     .discountProductItem:nth-child(n+5),
     .stockItem:nth-child(n+5){
         display: none;
     }
-}
 
-@media all and (max-width: 750px) {
-    .newsColumn {
-        flex-basis: 35vw;
+    .upperFooterFirstColumn,
+    .upperFooterSecondColumn {
+        max-width: 23vw;
+    }
+
+    .upperFooterThirdColumn a:last-child {
+        display: block;
     }
 
     .upperFooterFourthColumn > a {
@@ -197,33 +203,8 @@
     }
 }
 
-@media all and (max-width: 700px) {
-    .newProductItem:nth-child(n+4),
-    .recommendProductItem:nth-child(n+4),
-    .discountProductItem:nth-child(n+4),
-    .stockItem:nth-child(n+4){
-        display: none;
-    }
-
-    .upperFooterBlock {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .upperFooterFourthColumn {
-        margin: 0 auto;
-    }
-}
-
-@media all and (max-width: 500px) {
+@media all and (max-width: 750px) {
     .newsBlock {
-        display: none;
-    }
-
-    .newProductItem:nth-child(n+3),
-    .recommendProductItem:nth-child(n+3),
-    .discountProductItem:nth-child(n+3),
-    .stockItem:nth-child(n+3){
         display: none;
     }
 
@@ -233,6 +214,13 @@
     .stockHeader h2{
         font-size: 16px;
         padding-top: 7px;
+    }
+
+    .newProductItem:nth-child(n+3),
+    .recommendProductItem:nth-child(n+3),
+    .discountProductItem:nth-child(n+3),
+    .stockItem:nth-child(n+3){
+        display: none;
     }
 
     .newProductItem:nth-child(n+2),
@@ -247,7 +235,6 @@
     }
 
     .mobileFooter {
-        margin-top: 20px;
         display: flex;
         flex-direction: column;
     }
@@ -309,6 +296,7 @@
         background-color: #5c7489;
         padding: 30px 10px 0 10px;
         display: flex;
+        justify-content: space-between;
     }
 
     .mobileFooterLeftColumn p{
@@ -356,6 +344,7 @@
     }
 
     .mobileFooterSecondLine p {
+        padding-top: 6px;
         font-size: 12px;
     }
 
