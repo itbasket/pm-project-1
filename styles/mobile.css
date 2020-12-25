@@ -243,6 +243,9 @@
         display: block;
     }
 
+    .upperFooterFourthColumn > a {
+        display: none;
+    }
 }
 
 @media all and (max-width: 750px) {

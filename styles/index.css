@@ -516,7 +516,8 @@
 }
 
 .newsColumn {
-    flex-basis: 12.5vw;
+    font-family: "Roboto-Regular", sans-serif;
+    flex-basis: 20vw;
     flex-direction: column;
     margin-right: 30px;
 }
