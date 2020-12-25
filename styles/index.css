@@ -373,6 +373,11 @@
     overflow: hidden;
 }
 
+.advertisingColumn .advertising a {
+    text-decoration: none;
+    color: rgb(70, 115, 171);
+}
+
 .advertisingColumn .slider {
     position: relative;
     height: 370px;
