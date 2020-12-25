@@ -1,4 +1,10 @@
 @media all and (max-width: 1140px) {
+
+    .wrapper {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
     .navigation {
         display: none;
     }
@@ -7,11 +13,6 @@
         display: block;
         background-color: #040d0d;
         color: #737a7b;
-    }
-
-    .wrapper {
-        margin-right: 15px;
-        margin-left: 15px;
     }
 
     nav {
@@ -124,37 +125,13 @@
         display: none;
     }
 
-    .newsColumn {
-        flex-basis: 25vw;
+    .contacts {
+        flex-grow: 2;
     }
 
     .contacts .contactsMain {
         text-align: right;
         padding-left: 5px;
-    }
-
-    .advertisingColumn .advertising {
-        font-size: 12px;
-    }
-
-    .keyBrandItem:nth-child(n+6) {
-        display: none;
-    }
-
-    .reasonItem {
-        min-width: 350px;
-    }
-
-    .numberHeader hr {
-        margin-right: 15px;
-    }
-
-    .numberItem:nth-child(n+5) {
-        display: none;
-    }
-
-    .contacts {
-        flex-grow: 2;
     }
 
     .search {
@@ -163,6 +140,14 @@
 
     .searchMobile {
         display: flex;
+    }
+
+    .newsColumn {
+        flex-basis: 25vw;
+    }
+
+    .advertisingColumn .advertising {
+        font-size: 12px;
     }
 
     .linkToAll {
@@ -209,6 +194,22 @@
         margin-right: auto;
     }
 
+    .keyBrandItem:nth-child(n+6) {
+        display: none;
+    }
+
+    .reasonItem {
+        min-width: 350px;
+    }
+
+    .numberHeader hr {
+        margin-right: 15px;
+    }
+
+    .numberItem:nth-child(n+5) {
+        display: none;
+    }
+
     .upperFooterFourthColumn > a {
         margin-right: 5px;
     }
@@ -245,6 +246,22 @@
 }
 
 @media all and (max-width: 750px) {
+
+    .headerMain .authorization > a:nth-child(1),
+    .advertisingColumn,
+    .popularProductBlock,
+    .keyBrandBlock,
+    .advantageBlock,
+    .reasonBlock,
+    .numberBlock,
+    .descriptionBlock{
+        display: none;
+    }
+
+    .headerMain .authorization {
+        min-width: 10px;
+    }
+
     .newsBlock {
         display: none;
     }
@@ -269,6 +286,40 @@
     .discountProductItem:nth-child(n+2),
     .stockItem:nth-child(n+2) {
         margin: 0 auto;
+    }
+    .workItem.workPhone,
+    .workItem.workApprove,
+    .workItem.workShipping,
+    .workItem.workPayment {
+        width: 40%;
+        min-width: 125px;
+        padding: 50px 20px 30px;
+    }
+
+    .workItem.workPhone::before,
+    .workItem.workApprove::before,
+    .workItem.workShipping::before,
+    .workItem.workPayment::before {
+        left: 40%;
+    }
+
+    .workItem.workArrow {
+        width: 10%;
+    }
+
+    .workItem.workArrow:nth-child(4) {
+        display: none;
+    }
+
+    .workTabs,
+    .workContent {
+        flex-wrap: wrap;
+    }
+
+    .workTab {
+        font-size: 12px;
+        padding: 10px;
+        margin-bottom: 10px;
     }
 
     footer {
@@ -402,54 +453,5 @@
         text-align: center;
         padding-top: 15px;
         padding-bottom: 15px;
-    }
-
-    .headerMain .authorization > a:nth-child(1),
-    .advertisingColumn,
-    .popularProductBlock,
-    .keyBrandBlock,
-    .advantageBlock,
-    .reasonBlock,
-    .numberBlock {
-        display: none;
-    }
-
-    .headerMain .authorization {
-        min-width: 10px;
-    }
-
-    .workItem.workPhone,
-    .workItem.workApprove,
-    .workItem.workShipping,
-    .workItem.workPayment {
-        width: 40%;
-        min-width: 125px;
-        padding: 50px 20px 30px;
-    }
-
-    .workItem.workPhone::before,
-    .workItem.workApprove::before,
-    .workItem.workShipping::before,
-    .workItem.workPayment::before {
-        left: 40%;
-    }
-
-    .workItem.workArrow {
-        width: 10%;
-    }
-
-    .workItem.workArrow:nth-child(4) {
-        display: none;
-    }
-
-    .workTabs,
-    .workContent {
-        flex-wrap: wrap;
-    }
-
-    .workTab {
-        font-size: 12px;
-        padding: 10px;
-        margin-bottom: 10px;
     }
 }
