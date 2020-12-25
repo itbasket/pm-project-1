@@ -439,7 +439,7 @@
     font-size: 10px;
     color: rgb(255, 88, 22);
     text-align: center;
-    background: url("../images/headerBg.jpg") rgb(54, 62, 72);
+    background: url("../images/icons/headerBg.jpg") rgb(54, 62, 72);
     background-size: cover;
     border-radius: 4px;
 }
@@ -516,7 +516,8 @@
 }
 
 .newsColumn {
-    flex-basis: 12.5vw;
+    font-family: "Roboto-Regular", sans-serif;
+    flex-basis: 20vw;
     flex-direction: column;
     margin-right: 30px;
 }
