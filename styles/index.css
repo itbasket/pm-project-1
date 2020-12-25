@@ -43,7 +43,8 @@
 }
 
 .authorization a,
-.contacts .contactsMain a {
+.contacts .contactsMain a,
+.contactsMobile a {
     color: rgb(70, 115, 171);
 }
 
@@ -111,33 +112,48 @@
     border-bottom: 1px dotted;
 }
 
-.contacts .contactsMain {
+.contactsMain {
     font-size: 14px;
     padding-left: 15px;
 }
 
-.contacts .mainPhone {
+.mainPhone {
     font-size: 22px;
     font-weight: 600;
 }
 
-.contacts .socialIcon {
+.socialIcon {
     display: inline-block;
     width: 16px;
     height: 16px;
     margin-right: 5px;
 }
 
-.contacts .socialIcon.wa {
+.socialIcon.wa {
     background-image: url("../images/icons/WhatsApp.png");
 }
 
-.contacts .socialIcon.viber {
+.socialIcon.viber {
     background-image: url("../images/icons/Viber.png");
+}
+
+.socialIcon.skype {
+    background-image: url("../images/icons/Skype.png");
 }
 
 .contacts .contactsMain span {
     vertical-align: top;
+}
+
+.contactsMobile {
+    display: none;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.contactsMobile p,
+.contactsMobile a {
+    margin-bottom: 10px;
 }
 
 .search {
@@ -292,6 +308,37 @@
     left: 0;
     top: 0;
     background-image: url("../images/icons/comparison.png");
+}
+
+.cartMobile {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 40px;
+    cursor: pointer;
+}
+
+.cartMobile button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 26px;
+    height: 22px;
+}
+
+.cartCounter {
+    position: absolute;
+    top: -3px;
+    left: 15px;
+    width: 20px;
+    height: 12px;
+    font-size: 10px;
+    color: rgb(255, 88, 22);
+    text-align: center;
+    background: url("../images/headerBg.jpg") rgb(54, 62, 72);
+    background-size: cover;
+    border-radius: 4px;
 }
 
 .newsBlock {

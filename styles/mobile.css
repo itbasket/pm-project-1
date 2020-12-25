@@ -71,6 +71,9 @@
 
 @media all and (max-width: 750px) {
     .headerMain .authorization > a:nth-child(1),
+    .logo .desc,
+    .contacts,
+    .cart,
     .advertisingColumn,
     .popularProductBlock,
     .keyBrandBlock,
@@ -82,6 +85,38 @@
 
     .headerMain .authorization {
         min-width: 10px;
+    }
+    .logo {
+        flex-grow: 3;
+    }
+
+    .logo .name {
+        font-size: 32px;
+        height: 33px;
+    }
+
+    .logo .name > div {
+        width: 52px;
+        height: 33px;
+    }
+
+    .contactsMobile,
+    .cartMobile {
+        display: flex;
+    }
+
+    .mainPhone {
+        font-size: 17px;
+    }
+
+    .searchMobile {
+        width: 40px;
+    }
+
+    .contactsMobile span,
+    .contactsMobile a,
+    .headerTopRow {
+        font-size: 13px;
     }
 
     .workItem.workPhone,
