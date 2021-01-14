@@ -124,10 +124,6 @@
         display: none;
     }
 
-    .newsColumn {
-        flex-basis: 25vw;
-    }
-
     .linkToAll {
         display: none;
     }
@@ -179,7 +175,7 @@
 }
 @media all and (max-width: 980px) {
     .newsColumn {
-        flex-basis: 35vw;
+        width: 220px;
     }
 
     .newProductItem:nth-child(n+5),
