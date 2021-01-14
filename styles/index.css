@@ -54,13 +54,11 @@
     color: #ff5816;
 }
 
-#firstDropdown,
-#secondDropdown {
+.dropdownMenu {
     position: relative;
 }
 
-#firstDropdown:after,
-#secondDropdown:after {
+.dropdownMenu:after {
     display: inline-block;
     position: relative;
     left: 5px;
@@ -68,13 +66,11 @@
     transition-duration: 0.2s;
 }
 
-#firstDropdown:hover:after,
-#secondDropdown:hover:after {
+.dropdownMenu:hover:after {
     transform: rotate(180deg);
 }
 
-#firstDropdownContent,
-#secondDropdownContent{
+.dropdownMenu + div{
     background-color: black;
     position: absolute;
     display: none;
@@ -83,32 +79,26 @@
     min-width: 150px;
 }
 
-#firstDropdown:hover ~ #firstDropdownContent,
-#firstDropdownContent:hover,
-#secondDropdown:hover ~ #secondDropdownContent,
-#secondDropdownContent:hover {
+.dropdownMenu:hover ~ div,
+.dropdownMenu + div:hover {
     display: flex;
     flex-direction: column;
 }
 
-#firstDropdownContent a,
-#secondDropdownContent a{
+.dropdownMenu + div a{
     padding: 8px 10px;
     border-bottom: 1px dotted rgba(255,255,255,0.3);
 }
 
-#firstDropdownContent a:after,
-#secondDropdownContent a:after {
+.dropdownMenu + div a:after {
     content: '';
 }
 
-#firstDropdownContent a:first-child,
-#secondDropdownContent a:first-child {
+.dropdownMenu + div a:first-child {
     margin-top: 12px;
 }
 
-#firstDropdownContent a:last-child,
-#secondDropdownContent a:last-child {
+.dropdownMenu + div a:last-child {
     border: 0;
 }
 
@@ -518,25 +508,27 @@
 
 .newsColumn {
     font-family: "Roboto-Regular", sans-serif;
-    min-width: 250px;
+    width: 265px;
     flex-direction: column;
     margin-right: 30px;
+    max-height: 500px;
+    overflow-y: auto;
 }
 
 .newsColumn h3 {
     color: #2c3333;
-    margin-top: 14px;
-    margin-bottom: 17px;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 .newsColumnContainer {
-    margin-top: 12px;
+    margin-top: 8px;
 }
 
 .newsColumnItem {
     display: flex;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 13px;
+    padding-bottom: 13px;
     border-bottom: 1px dotted gray;
 }
 
@@ -704,6 +696,8 @@
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 .popularProductHeader h2,
@@ -786,7 +780,7 @@
 .recommendProductItem,
 .discountProductItem {
     max-width: 250px;
-    min-width: 160px;
+    min-width: 250px;
     border: 1px solid #dbdee6;
     border-radius: 10px;
     padding: 10px;
@@ -918,7 +912,7 @@
 
 .stockItem {
     max-width: 230px;
-    min-width: 160px;
+    min-width: 230px;
     border: 1px solid #dbdee6;
     border-radius: 10px;
     margin-left: 5px;
