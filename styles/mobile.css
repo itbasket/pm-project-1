@@ -1,8 +1,6 @@
 @media all and (max-width: 1140px) {
 
     .wrapper {
-        margin-right: 15px;
-        margin-left: 15px;
         max-width: 980px;
     }
 
@@ -121,6 +119,10 @@
         width: 100vw;
         z-index: -1;
     }
+
+    .search {
+        display: none;
+    }
     
     .catalogMenu {
         display: none;
@@ -144,10 +146,6 @@
         display: flex;
     }
 
-    .newsBlock {
-        max-height: 405px;
-    }
-
     .advertisingColumn .advertising {
         font-size: 12px;
         max-width: 680px;
@@ -155,12 +153,6 @@
 
     .advertisingColumn .slider {
         width: 680px;
-        height: 295px;
-    }
-
-    .advertisingColumn .slide .leftArrow,
-    .advertisingColumn .slide .rightArrow {
-        top: 120px;
     }
 
     .linkToAll {
@@ -237,27 +229,17 @@
         max-width: 750px;
     }
 
-    .newsBlock {
-        max-height: 305px;
-    }
-
     .newsColumn {
         width: 220px;
     }
 
     .advertisingColumn .advertising {
         font-size: 9px;
-        max-width: 450px;
+        max-width: 500px;
     }
 
     .advertisingColumn .slider {
-        width: 450px;
-        height: 195px;
-    }
-
-    .advertisingColumn .slide .leftArrow,
-    .advertisingColumn .slide .rightArrow {
-        top: 70px;
+        width: 500px;
     }
 
     .newProductItem:nth-child(n+5),
