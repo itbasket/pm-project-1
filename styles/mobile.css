@@ -3,6 +3,7 @@
     .wrapper {
         margin-right: 15px;
         margin-left: 15px;
+        max-width: 980px;
     }
 
     .navigation {
@@ -231,6 +232,11 @@
     }
 }
 @media all and (max-width: 980px) {
+
+    .wrapper {
+        max-width: 750px;
+    }
+
     .newsBlock {
         max-height: 305px;
     }
