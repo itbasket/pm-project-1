@@ -142,12 +142,23 @@
         display: flex;
     }
 
-    .newsColumn {
-        flex-basis: 25vw;
+    .newsBlock {
+        max-height: 405px;
     }
 
     .advertisingColumn .advertising {
         font-size: 12px;
+        max-width: 680px;
+    }
+
+    .advertisingColumn .slider {
+        width: 680px;
+        height: 295px;
+    }
+
+    .advertisingColumn .slide .leftArrow,
+    .advertisingColumn .slide .rightArrow {
+        top: 120px;
     }
 
     .linkToAll {
@@ -219,8 +230,23 @@
     }
 }
 @media all and (max-width: 980px) {
-    .newsColumn {
-        flex-basis: 35vw;
+    .newsBlock {
+        max-height: 305px;
+    }
+
+    .advertisingColumn .advertising {
+        font-size: 9px;
+        max-width: 450px;
+    }
+
+    .advertisingColumn .slider {
+        width: 450px;
+        height: 195px;
+    }
+
+    .advertisingColumn .slide .leftArrow,
+    .advertisingColumn .slide .rightArrow {
+        top: 70px;
     }
 
     .newProductItem:nth-child(n+5),
