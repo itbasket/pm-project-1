@@ -265,6 +265,9 @@
 }
 
 @media all and (max-width: 750px) {
+    .wrapper {
+        max-width: 320px;
+    }
 
     .headerMain .authorization > a:nth-child(1),
     .logo .desc,
