@@ -245,11 +245,8 @@
     .newProductItem:nth-child(n+4),
     .recommendProductItem:nth-child(n+4),
     .discountProductItem:nth-child(n+4),
-    .stockItem:nth-child(n+4) {
-        display: none;
-    }
-
-    .popularProductItem:nth-child(4) {
+    .stockItem:nth-child(n+4),
+    .popularProductItem:nth-child(n+4) {
         display: none;
     }
 

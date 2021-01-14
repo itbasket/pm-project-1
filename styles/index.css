@@ -1036,6 +1036,10 @@
     vertical-align: bottom;
 }
 
+.popularProductItem:nth-child(n+5) {
+    display: none;
+}
+
 .popularProductItemLink {
     height: 40px;
 }
