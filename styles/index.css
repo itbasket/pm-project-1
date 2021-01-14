@@ -690,17 +690,6 @@
     display: none;
 }
 
-.newProductItemsBlock,
-.recommendProductItemsBlock,
-.discountProductItemsBlock,
-.stockItemsBlock{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-    max-width: 100%;
-    overflow-x: auto;
-}
-
 .popularProductHeader h2,
 .keyBrandHeader h2,
 .advantageHeader h2,
@@ -763,6 +752,24 @@
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+}
+.newProductItemsBlock,
+.recommendProductItemsBlock,
+.discountProductItemsBlock,
+.stockItemsBlock{
+    display: flex;
+    justify-content: center;
+}
+
+.newProductItemsBlock > div,
+.recommendProductItemsBlock > div,
+.discountProductItemsBlock > div,
+.stockItemsBlock > div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 .newProductItemsBlock > button,

@@ -242,10 +242,10 @@
         width: 500px;
     }
 
-    .newProductItem:nth-child(n+5),
-    .recommendProductItem:nth-child(n+5),
-    .discountProductItem:nth-child(n+5),
-    .stockItem:nth-child(n+5) {
+    .newProductItem:nth-child(n+4),
+    .recommendProductItem:nth-child(n+4),
+    .discountProductItem:nth-child(n+4),
+    .stockItem:nth-child(n+4) {
         display: none;
     }
 
@@ -331,10 +331,10 @@
         padding-top: 7px;
     }
 
-    .newProductItem:nth-child(n+3),
-    .recommendProductItem:nth-child(n+3),
-    .discountProductItem:nth-child(n+3),
-    .stockItem:nth-child(n+3){
+    .newProductItem:nth-child(n+2),
+    .recommendProductItem:nth-child(n+2),
+    .discountProductItem:nth-child(n+2),
+    .stockItem:nth-child(n+2){
         display: none;
     }
 
