@@ -14,6 +14,54 @@
         color: #737a7b;
     }
 
+    #overlay {
+        display: none;
+    }
+
+    #overlay ul {
+        padding-top: 70px;
+    }
+
+    #overlay ul li > a {
+        color: #ff6837;
+        text-decoration: none;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 26px;
+    }
+
+    #overlay ul li span {
+        color: #ff6837;
+        text-decoration: none;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 26px;
+        cursor: pointer;
+    }
+
+    .mobileDropdownMenu:after {
+        display: inline-block;
+        position: relative;
+        left: 5px;
+        content: url("../images/icons/orangeTriangleForMenu.png");
+        transition-duration: 0.2s;
+    }
+
+    .mobileDropdownMenu + div {
+        display: none;
+        text-align: center;
+        min-width: 150px;
+        z-index: 2;
+    }
+
+    .mobileDropdownMenu + div a {
+        display: block;
+        font-size: 14px;
+        color: #fff;
+        text-decoration: none;
+        margin: 10px 0;
+    }
+
     nav {
         text-align: center;
         background: #e5e5e5;
@@ -91,22 +139,6 @@
         transform: rotate(45deg);
     }
 
-    #overlay {
-        display: none;
-    }
-
-    #overlay ul {
-        padding-top: 70px;
-    }
-
-    #overlay ul li a {
-        color: #ff6837;
-        text-decoration: none;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        font-size: 26px;
-    }
-
     nav input:checked ~ #overlay {
         display: block;
         background-color: rgba(0,0,0,0.9);
@@ -177,6 +209,11 @@
         height: 30px;
     }
 
+    .carouselItem {
+        min-width: 230px;
+        margin-right: 13px;
+    }
+
     .newProductItemsBlock > button,
     .recommendProductItemsBlock > button,
     .discountProductItemsBlock > button,
@@ -242,10 +279,10 @@
         width: 500px;
     }
 
-    .newProductItem:nth-child(n+4),
-    .recommendProductItem:nth-child(n+4),
-    .discountProductItem:nth-child(n+4),
-    .stockItem:nth-child(n+4),
+    .carouselItem {
+        margin-right: 17px;
+    }
+
     .popularProductItem:nth-child(n+4) {
         display: none;
     }
@@ -323,6 +360,10 @@
         display: none;
     }
 
+    .carouselItem {
+        margin-right: 90px;
+    }
+
     .newProductHeader h2,
     .recommendProductHeader h2,
     .discountProductHeader h2,
@@ -331,19 +372,6 @@
         padding-top: 7px;
     }
 
-    .newProductItem:nth-child(n+2),
-    .recommendProductItem:nth-child(n+2),
-    .discountProductItem:nth-child(n+2),
-    .stockItem:nth-child(n+2){
-        display: none;
-    }
-
-    .newProductItem:nth-child(n+2),
-    .recommendProductItem:nth-child(n+2),
-    .discountProductItem:nth-child(n+2),
-    .stockItem:nth-child(n+2) {
-        margin: 0 auto;
-    }
     .workItem.workPhone,
     .workItem.workApprove,
     .workItem.workShipping,
