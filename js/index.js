@@ -16,12 +16,15 @@ ITEMS.forEach((item, index) => {
 
 // top menu sort
 let mainMenu = []
-for (let key in TOP_MENU) {
-    mainMenu.push(TOP_MENU[key])
+if (TOP_MENU) {
+    for (let key in TOP_MENU) {
+        mainMenu.push(TOP_MENU[key])
+    }
+    mainMenu = mainMenu
+        .sort((a, b) => a.order > b.order ? 1 : -1)
+        .slice(0, 9)
 }
-mainMenu = mainMenu
-    .sort((a, b) => a.order > b.order ? 1 : -1)
-    .slice(0, 9)
+
 
 // new products sort
 const newProductItems = ITEMS
@@ -62,9 +65,10 @@ document.querySelectorAll('.carouselBlock').forEach(
 // main menu display
 function displayMainMenu() {
     const container = document.querySelector('.navigation')
-    mainMenu.forEach(item => {
-        container.querySelector('ul').insertAdjacentHTML('beforeend',
-            `<li>
+    if (mainMenu.length > 0) {
+        mainMenu.forEach(item => {
+            container.querySelector('ul').insertAdjacentHTML('beforeend',
+                `<li>
                 ${ item.url
                     ? `<a href="${ item.url }">${ item.title }</a>`
                     : `<p class="dropdownMenu">${ item.title }</p>`
@@ -72,26 +76,30 @@ function displayMainMenu() {
                 ${ item.submenu
                     ? `<div>
                             ${ item.submenu
-                                .sort((a, b) => a.order > b.order ? 1 : -1)
-                                .map(subitem => {
-                                    return `<a href="${ subitem.url ?? '#' }">${ subitem.title }</a>`
-                                })
-                                .join('')
-                            }
+                        .sort((a, b) => a.order > b.order ? 1 : -1)
+                        .map(subitem => {
+                            return `<a href="${ subitem.url ?? '#' }">${ subitem.title }</a>`
+                        })
+                        .join('')
+                    }
                         </div>`
                     : ''
                 }
             </li>`
-        )
-    })
+            )
+        })
+    } else {
+        container.style.display = 'none'
+    }
 }
 
 // burger menu display
 function displayBurgerMenu() {
     const container = document.querySelector('.mobileMenu')
-    mainMenu.forEach(item => {
-        container.querySelector('ul').insertAdjacentHTML('beforeend',
-            `<li>
+    if (mainMenu.length > 0) {
+        mainMenu.forEach(item => {
+            container.querySelector('ul').insertAdjacentHTML('beforeend',
+                `<li>
                 ${ item.url
                     ? `<a href="${ item.url }">${ item.title }</a>`
                     : `<span class="mobileDropdownMenu" onclick="toggleSubmenu(event)">${ item.title }</span>`
@@ -99,18 +107,21 @@ function displayBurgerMenu() {
                 ${ item.submenu
                     ? `<div>
                         ${ item.submenu
-                            .sort((a, b) => a.order > b.order ? 1 : -1)
-                            .map(subitem => {
-                                return `<a href="${ subitem.url ?? '#' }">${ subitem.title }</a>`
-                            })
-                            .join('')
-                        }
+                        .sort((a, b) => a.order > b.order ? 1 : -1)
+                        .map(subitem => {
+                            return `<a href="${ subitem.url ?? '#' }">${ subitem.title }</a>`
+                        })
+                        .join('')
+                    }
                     </div>`
                     : ''
                 }
             </li>`
-        )
-    })
+            )
+        })
+    } else {
+        container.style.display = 'none'
+    }
 }
 
 function toggleSubmenu(event) {
@@ -132,25 +143,29 @@ function updateCart(price) {
 // catalog menu display
 function displayCatalogMenu() {
     const container = document.querySelector('.catalogMenu')
-    MENU
-        .sort((a, b) => a.order > b.order ? 1 : -1)
-        .forEach(item => {
-            container.querySelector('ul').insertAdjacentHTML('beforeend',
-                `<li class="catalogMenuItem">
+    if (MENU.length > 0) {
+        MENU
+            .sort((a, b) => a.order > b.order ? 1 : -1)
+            .forEach(item => {
+                container.querySelector('ul').insertAdjacentHTML('beforeend',
+                    `<li class="catalogMenuItem">
                 <a href="${ item.url ?? '#'}">
                     ${ item.title }
                 </a>
             </li>`
-            )
-        })
+                )
+            })
 
-    const leftButton = container.querySelector('.catalogMenuButtonLeft')
-    const rightButton = container.querySelector('.catalogMenuButtonRight')
-    leftButton.addEventListener('click', () => menuScroll('left'))
-    rightButton.addEventListener('click', () => menuScroll('right'))
+        const leftButton = container.querySelector('.catalogMenuButtonLeft')
+        const rightButton = container.querySelector('.catalogMenuButtonRight')
+        leftButton.addEventListener('click', () => menuScroll('left'))
+        rightButton.addEventListener('click', () => menuScroll('right'))
 
-    if (MENU.length > 10) {
-        rightButton.style.display = 'block'
+        if (MENU.length > 10) {
+            rightButton.style.display = 'block'
+        }
+    } else {
+        container.style.display = 'none'
     }
 
     function menuScroll(direction) {
@@ -183,15 +198,16 @@ function displayCatalogMenu() {
 function displayNews() {
     const months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']
     const newsCount = 3
-    NEWS
-        .filter(item => item.date && item.title && item.description && item.img && item.url)
-        .sort(() => Math.random() - 0.5)
-        .slice(0, newsCount)
-        .forEach(item => {
-            const day = item.date.match(/(?<=\/)\d+$/)
-            const month = Number(item.date.match(/(?<=\/)\d+(?=\/)/))
-            document.querySelector('.newsContainer').insertAdjacentHTML('beforeend',
-                `<div class="newsColumnItem">
+    const validNews = NEWS.filter(item => item.date && item.title && item.description && item.img && item.url)
+    if (validNews.length > 0) {
+        validNews
+            .sort(() => Math.random() - 0.5)
+            .slice(0, newsCount)
+            .forEach(item => {
+                const day = item.date.match(/(?<=\/)\d+$/)
+                const month = Number(item.date.match(/(?<=\/)\d+(?=\/)/))
+                document.querySelector('.newsContainer').insertAdjacentHTML('beforeend',
+                    `<div class="newsColumnItem">
                   <div class="newsColumnItemImg">
                     <img src="${ item.img }" alt="${ item.title }">
                     <div class="newsColumnItemDay">${ day }</div>
@@ -202,68 +218,76 @@ function displayNews() {
                     <p>Предприятие «Элтекс» запустило производство точки доступа WER-2ac.</p>
                   </div>
                 </div>`
-            )
-        })
+                )
+            })
+    } else {
+        document.querySelector('.newsColumn').style.display = 'none'
+    }
+
 }
 
 // slider
 function slider() {
     const container = document.querySelector('#slides')
     const controlsContainer = document.querySelector('.slideControls')
-    BANNER
-        .filter(item => item.img)
-        .sort((a, b) => a.order > b.order ? 1 : -1)
-        .forEach(item => {
-            container.insertAdjacentHTML('beforeend',
-                `<li class="slide">
+    if (BANNER.length > 0) {
+        BANNER
+            .filter(item => item.img)
+            .sort((a, b) => a.order > b.order ? 1 : -1)
+            .forEach(item => {
+                container.insertAdjacentHTML('beforeend',
+                    `<li class="slide">
                     <img src="${ item.img }" alt="Слайд">
                 </li>`
-            )
-            controlsContainer.querySelector('.dots').insertAdjacentHTML('beforeend',
-                `<li class="dot"></li>`
-            )
+                )
+                controlsContainer.querySelector('.dots').insertAdjacentHTML('beforeend',
+                    `<li class="dot"></li>`
+                )
+            })
+
+        const slides = container.querySelectorAll('.slide')
+        const dots = controlsContainer.querySelectorAll('.dot')
+        let currentSlide = 0
+        slides[currentSlide].classList.add('active')
+        dots[currentSlide].classList.add('active')
+        const slideInterval = setInterval(nextSlide,5000)
+
+        controlsContainer.querySelector('.leftArrow').addEventListener('click', prevSlide)
+        controlsContainer.querySelector('.rightArrow').addEventListener('click', () => nextSlide(false))
+        dots.forEach((item, index) => {
+            dots[index].addEventListener('click', () => chooseSlide(index))
         })
 
-    const slides = container.querySelectorAll('.slide')
-    const dots = controlsContainer.querySelectorAll('.dot')
-    let currentSlide = 0
-    slides[currentSlide].classList.add('active')
-    dots[currentSlide].classList.add('active')
-    const slideInterval = setInterval(nextSlide,5000)
+        function nextSlide(auto = true) {
+            slides[currentSlide].classList.remove('active')
+            dots[currentSlide].classList.remove('active')
+            currentSlide = (currentSlide + 1) % slides.length
+            slides[currentSlide].classList.add('active')
+            dots[currentSlide].classList.add('active')
+            if (!auto) {
+                clearInterval(slideInterval)
+            }
+        }
 
-    controlsContainer.querySelector('.leftArrow').addEventListener('click', prevSlide)
-    controlsContainer.querySelector('.rightArrow').addEventListener('click', () => nextSlide(false))
-    dots.forEach((item, index) => {
-        dots[index].addEventListener('click', () => chooseSlide(index))
-    })
-
-    function nextSlide(auto = true) {
-        slides[currentSlide].classList.remove('active')
-        dots[currentSlide].classList.remove('active')
-        currentSlide = (currentSlide + 1) % slides.length
-        slides[currentSlide].classList.add('active')
-        dots[currentSlide].classList.add('active')
-        if (!auto) {
+        function prevSlide() {
+            slides[currentSlide].classList.remove('active')
+            dots[currentSlide].classList.remove('active')
+            currentSlide = currentSlide !== 0 ? currentSlide - 1 : slides.length - 1
+            slides[currentSlide].classList.add('active')
+            dots[currentSlide].classList.add('active')
             clearInterval(slideInterval)
         }
-    }
 
-    function prevSlide() {
-        slides[currentSlide].classList.remove('active')
-        dots[currentSlide].classList.remove('active')
-        currentSlide = currentSlide !== 0 ? currentSlide - 1 : slides.length - 1
-        slides[currentSlide].classList.add('active')
-        dots[currentSlide].classList.add('active')
-        clearInterval(slideInterval)
-    }
-
-    function chooseSlide(id) {
-        slides[currentSlide].classList.remove('active')
-        dots[currentSlide].classList.remove('active')
-        currentSlide = id
-        slides[currentSlide].classList.add('active')
-        dots[currentSlide].classList.add('active')
-        clearInterval(slideInterval)
+        function chooseSlide(id) {
+            slides[currentSlide].classList.remove('active')
+            dots[currentSlide].classList.remove('active')
+            currentSlide = id
+            slides[currentSlide].classList.add('active')
+            dots[currentSlide].classList.add('active')
+            clearInterval(slideInterval)
+        }
+    } else {
+        document.querySelector('.slider').style.display = 'none'
     }
 }
 
@@ -272,9 +296,10 @@ function displayProductItems(type, container, items) {
     switch (type) {
 
         case 'new':
-            items.forEach(item => {
-                container.querySelector('.carousel').insertAdjacentHTML('beforeend',
-                    `<div class="newProductItem carouselItem">
+            if (items.length > 0) {
+                items.forEach(item => {
+                    container.querySelector('.carousel').insertAdjacentHTML('beforeend',
+                        `<div class="newProductItem carouselItem">
                       <a href="${ item.url ?? '#'}">
                         <div class="newProductItemImg">
                           <img src="${ item.img ?? 'images/icons/noImage.png'}" alt="${ item.description }">
@@ -282,14 +307,14 @@ function displayProductItems(type, container, items) {
                         <a href="${ item.url ?? '#'}">${ item.description }</a>
                         <div class="newProductItemPriceBlock">
                             ${ !isNaN(item.price)
-                                ? `<p>Цена:</p>
+                            ? `<p>Цена:</p>
                                     <p class="price">${ item.price } ${CURRENCY}</p>
                                     ${ !isNaN(item.oldPrice)
-                                    ? `<p class="oldPrice">${ item.oldPrice } ${CURRENCY}</p>`
-                                    : ''
-                                }`
-                                : '<p style="color: #797471;">Товар временно недоступен</p>'
-                            }
+                                ? `<p class="oldPrice">${ item.oldPrice } ${CURRENCY}</p>`
+                                : ''
+                            }`
+                            : '<p style="color: #797471;">Товар временно недоступен</p>'
+                        }
                         </div>
                         <div class="newProductItemBuyLine">
                           ${ !isNaN(item.price)
@@ -298,22 +323,26 @@ function displayProductItems(type, container, items) {
                                     купить
                                 </button>`
                             : ''
-                            }
+                        }
                           ${ item.url
-                                ? `<a href="${ item.url }">Подробнее</a>`
-                                : ''
-                            }
+                            ? `<a href="${ item.url }">Подробнее</a>`
+                            : ''
+                        }
                         </div>
                       </a>
                     </div>`
-                )
-            })
+                    )
+                })
+            } else {
+                document.querySelector('.newProductBlock').style.display = 'none'
+            }
             break
 
         case 'recommended':
-            items.forEach(item => {
-                container.querySelector('.carousel').insertAdjacentHTML('beforeend',
-                    `<div class="recommendProductItem carouselItem">
+            if (items.length > 0) {
+                items.forEach(item => {
+                    container.querySelector('.carousel').insertAdjacentHTML('beforeend',
+                        `<div class="recommendProductItem carouselItem">
                       <a href="${ item.url ?? '#'}">
                         <div class="recommendProductItemImg">
                           <img src="${ item.img ?? 'images/icons/noImage.png'}" alt="${ item.description }">
@@ -321,14 +350,14 @@ function displayProductItems(type, container, items) {
                         <a href="${ item.url ?? '#'}">${ item.description }</a>
                         <div class="recommendProductItemPriceBlock">
                             ${ !isNaN(item.price)
-                        ? `<p>Цена:</p>
+                            ? `<p>Цена:</p>
                                     <p class="price">${ item.price } ${CURRENCY}</p>
                                     ${ !isNaN(item.oldPrice)
-                            ? `<p class="oldPrice">${ item.oldPrice } ${CURRENCY}</p>`
-                            : ''
-                        }`
-                        : '<p style="color: #797471;">Товар временно недоступен</p>'
-                            }
+                                ? `<p class="oldPrice">${ item.oldPrice } ${CURRENCY}</p>`
+                                : ''
+                            }`
+                            : '<p style="color: #797471;">Товар временно недоступен</p>'
+                        }
                         </div>
                         <div class="recommendProductItemBuyLine">
                           <button class="recommendProductItemBuyButton" ${ isNaN(item.price) ? 'disabled' : ''} onclick="updateCart(${ item.price })">
@@ -336,20 +365,24 @@ function displayProductItems(type, container, items) {
                             купить
                           </button>
                           ${ item.url
-                        ? `<a href="${ item.url }">Подробнее</a>`
-                        : ''
-                            }
+                            ? `<a href="${ item.url }">Подробнее</a>`
+                            : ''
+                        }
                         </div>
                       </a>
                     </div>`
-                )
-            })
+                    )
+                })
+            } else {
+                document.querySelector('.recommendProductBlock').style.display = 'none'
+            }
             break
 
         case 'sale':
-            items.forEach(item => {
-                container.querySelector('.carousel').insertAdjacentHTML('beforeend',
-                    `<div class="discountProductItem carouselItem">
+            if (items.length > 0) {
+                items.forEach(item => {
+                    container.querySelector('.carousel').insertAdjacentHTML('beforeend',
+                        `<div class="discountProductItem carouselItem">
                       <a href="${ item.url ?? '#'}">
                         <div class="discountProductItemImg">
                           <img src="${ item.img ?? 'images/icons/noImage.png'}" alt="${ item.description }">
@@ -357,14 +390,14 @@ function displayProductItems(type, container, items) {
                         <a href="${ item.url ?? '#'}">${ item.description }</a>
                         <div class="discountProductItemPriceBlock">
                             ${ !isNaN(item.price)
-                        ? `<p>Цена:</p>
+                            ? `<p>Цена:</p>
                                     <p class="price">${ item.price } ${CURRENCY}</p>
                                     ${ !isNaN(item.oldPrice)
-                            ? `<p class="oldPrice">${ item.oldPrice } ${CURRENCY}</p>`
-                            : ''
-                        }`
-                        : '<p style="color: #797471;">Товар временно недоступен</p>'
-                            }
+                                ? `<p class="oldPrice">${ item.oldPrice } ${CURRENCY}</p>`
+                                : ''
+                            }`
+                            : '<p style="color: #797471;">Товар временно недоступен</p>'
+                        }
                         </div>
                         <div class="discountProductItemBuyLine">
                           <button class="discountProductItemBuyButton" ${ isNaN(item.price) ? 'disabled' : ''} onclick="updateCart(${ item.price })">
@@ -372,23 +405,27 @@ function displayProductItems(type, container, items) {
                             купить
                           </button>
                           ${ item.url
-                        ? `<a href="${ item.url }">Подробнее</a>`
-                        : ''
-                            }
+                            ? `<a href="${ item.url }">Подробнее</a>`
+                            : ''
+                        }
                         </div>
                       </a>
                     </div>`
-                )
-            })
+                    )
+                })
+            } else {
+                document.querySelector('.discountProductBlock').style.display = 'none'
+            }
             break
 
         case 'promotion':
-            items.forEach(item => {
-                const days = item.time_action?.match(/\d+(?=d)/)
-                const hours = item.time_action?.match(/\d+(?=h)/)
-                const minutes = item.time_action?.match(/\d+(?=m)/)
-                container.querySelector('.carousel').insertAdjacentHTML('beforeend',
-                    `<div class="stockItem carouselItem">
+            if (items.length > 0) {
+                items.forEach(item => {
+                    const days = item.time_action?.match(/\d+(?=d)/)
+                    const hours = item.time_action?.match(/\d+(?=h)/)
+                    const minutes = item.time_action?.match(/\d+(?=m)/)
+                    container.querySelector('.carousel').insertAdjacentHTML('beforeend',
+                        `<div class="stockItem carouselItem">
                       <a href="${ item.url ?? '#'}">${ item.title }</a>
                       <img src="${ item.img ?? 'images/icons/noImage.png'}" alt="${ item.title }">
                       ${ item.description ? `<p>${ item.description }</p>` : ''}
@@ -396,7 +433,7 @@ function displayProductItems(type, container, items) {
                         <p>Срок действия:</p>
                         <div class="timer">
                           ${item.time_action
-                                ? `<div class="days">
+                            ? `<div class="days">
                                     <span>${Math.trunc(days / 10)}</span>
                                     <span>${days % 10}</span>
                                     <p>дней</p>
@@ -413,8 +450,8 @@ function displayProductItems(type, container, items) {
                                     <span>${minutes % 10}</span>
                                     <p>минут</p>
                                   </div>`
-                                : '<p>Бессрочно</p>'
-                            }
+                            : '<p>Бессрочно</p>'
+                        }
                         </div>
                       </div>
                       <div class="detailsLink">
@@ -424,14 +461,18 @@ function displayProductItems(type, container, items) {
                         }
                       </div>
                     </div>`
-                )
-            })
+                    )
+                })
+            } else {
+                document.querySelector('.stockBlock').style.display = 'none'
+            }
             break
 
         case 'popular':
-            items.forEach(item => {
-                container.insertAdjacentHTML('beforeend',
-                    `<div class="popularProductItem">
+            if (items.length > 0) {
+                items.forEach(item => {
+                    container.insertAdjacentHTML('beforeend',
+                        `<div class="popularProductItem">
                         <a href="${ item.url ?? '#'}">
                           <div class="popularProductItemImg">
                             <img src="${ item.img ?? 'images/icons/noImage.png'}" alt="${ item.title }">
@@ -441,8 +482,11 @@ function displayProductItems(type, container, items) {
                           </div>
                         </a>
                      </div>`
-                )
-            })
+                    )
+                })
+            } else {
+                document.querySelector('.popularProductBlock').style.display = 'none'
+            }
             break
 
         default:
@@ -565,7 +609,7 @@ function carousel(parent, container, mobile) {
         setTimeout(() => {
             rightButton.addEventListener('click', carouselMoveRight)
             mobileRightButton.addEventListener('click', carouselMoveRight)
-        }, 1000)
+        }, 500)
     }
 
     function carouselMoveRight() {
@@ -596,6 +640,6 @@ function carousel(parent, container, mobile) {
         setTimeout(() => {
             leftButton.addEventListener('click', carouselMoveLeft)
             mobileLeftButton.addEventListener('click', carouselMoveLeft)
-        }, 1000)
+        }, 500)
     }
 }
